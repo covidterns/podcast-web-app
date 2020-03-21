@@ -4,6 +4,9 @@ Podcast player web app
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Features](#features)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## General info
 This project is a web version of a podcast player mimicking popular services such as Apple music or Google podcasts.
@@ -19,3 +22,16 @@ Project is created with:
 	
 ## Setup
 Loren ipsum blah
+
+## Features
+* Beautiful UI for podcast playback
+* Effective categorization
+* Pseudo ad filter
+
+## Inspiration
+* https://podcasts.apple.com
+* https://podcasts.google.com
+
+## Contact
+Join our Discord at: https://discord.gg/Kf46SYx
+Head down to podcast-web-app 
