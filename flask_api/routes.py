@@ -12,7 +12,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @cross_origin()
 def get_tasks():
     podcast_show = request.args.get('podcast_show')
-    podcast_episode = request.arg.get('podcast_episode')
+    podcast_episode = request.args.get('podcast_episode')
     try:
         response = {
             'podcastShow': podcast_show,
