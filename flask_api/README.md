@@ -17,7 +17,7 @@ Example response:
 Install:
 ```
 git clone git@github.com:covidterns/podcast-web-app.git
-cd flask_api
+cd podcast-web-app/flask_api
 ```  
 Create a virtualenv:  
 ```
@@ -25,7 +25,7 @@ python3 -m venv env0
 ```  
 Activate it on Linux:
 ```
-. envo/bin/activate  
+. env0/bin/activate  
 ```  
 Or on Windows cmd:  
 ```
