@@ -4,7 +4,7 @@
 ### Example request and response 
 GET request from the command line:
 ```
-curl -i http://127.0.0.1:5000/api/podcasts?podcast_show="Top10s"&podcast_episode="Despacito"
+curl -i http://127.0.0.1:5000/application/podcast_episode/podcast_show=Top10s
 ```
 Example response: 
 ```
@@ -13,44 +13,12 @@ Example response:
 
 
 ## Install & run locally
+You will need [docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/).
 
-Install:
-```
-git clone git@github.com:covidterns/podcast-web-app.git
-cd podcast-web-app/flask_api
-```  
-Create a virtualenv:  
-```
-python3 -m venv env0  
-```  
-Activate it on Linux:
-```
-. env0/bin/activate  
-```  
-Or on Windows cmd:  
-```
-env0\Scripts\activate.bat  
-```  
-Install requirements:
-```
-pip install -r requirements.txt  
-```  
+### install dependencies and check that it works
 
-export variables
+```bash
+$ make install      # Install the pip dependencies on the docker container
+$ make start        # Run the container containing your local python server
 ```
-export FLASK_APP=routes.py
-```
-
-Run app 
-```
-FLASK run
-```
-
-or via the Procfile with Gunicorn (for production use)
-```
-gunicorn routes:app
-```
-
-
-View on [localhost:5000](http://127.0.0.1:5000)
-
+- checkout out the Makefile to see additional scripts
