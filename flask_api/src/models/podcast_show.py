@@ -8,16 +8,17 @@ from .abc import BaseModel
 class PodcastShow(db.Model, BaseModel):
     """ The PodcastShow model """
     __tablename__ = 'PodcastShow'
-    
-    ## TODO
-    
-    first_name = db.Column(db.String(300), primary_key=True)
-    last_name = db.Column(db.String(300), primary_key=True)
-    # The age of our user
-    age = db.Column(db.Integer, nullable=True)
 
-    def __init__(self, first_name, last_name, age=None):
+    id = db.Column(db.Integer, primary_key=True)
+    show_name = db.Column(db.String(300), unique=True)
+    author = db.Column(db.String(300), nullable=True)
+    description = db.Column(db.String(300), nullable=True)
+    episodes = db.relationship('podcast_episode', backref='PodcastShow', lazy=True)
+
+    def __init__(self, id, show_name, author, description=None,episodes=None):
         """ Create a new User """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+        self.id = id
+        self.show_name = show_name
+        self.author = author
+        self.description = description
+        self.episodes = episodes
