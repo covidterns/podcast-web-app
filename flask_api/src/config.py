@@ -9,7 +9,7 @@ PORT = int(os.getenv('APPLICATION_PORT', '3000'))
 DB_CONTAINER = os.getenv('APPLICATION_DB_CONTAINER', 'db')
 POSTGRES = {
     'user': os.getenv('APPLICATION_POSTGRES_USER', 'postgres'),
-    'pw': os.getenv('APPLICATION_POSTGRES_PW', ''),
+    'pw': os.getenv('APPLICATION_POSTGRES_PW', 'pass123'),
     'host': os.getenv('APPLICATION_POSTGRES_HOST', DB_CONTAINER),
     'port': os.getenv('APPLICATION_POSTGRES_PORT', 5432),
     'db': os.getenv('APPLICATION_POSTGRES_DB', 'postgres'),

@@ -17,10 +17,14 @@ down_revision = '4f2e2c180af'
 def upgrade():
     op.create_table(
         'user',
+        sa.Column('id', sa.Integer(), nullable=False),
         sa.Column('first_name', sa.String(length=300), nullable=False),
         sa.Column('last_name', sa.String(length=300), nullable=False),
-        sa.Column('age', sa.Integer(), nullable=True),
-        sa.PrimaryKeyConstraint('first_name', 'last_name')
+        sa.Column('email', sa.String(length=300), nullable=False),
+        sa.Column('password', sa.String(length=300), nullable=False),
+        sa.Column('created_at', sa.String(length=300), nullable=False),
+        sa.Column('modified_at', sa.Integer(), nullable=False),
+        sa.PrimaryKeyConstraint('id')
     )
 
 
